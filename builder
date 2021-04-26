@@ -1,10 +1,4 @@
-#
-# This is the "builder" Dockerfile used by all images to build from.
-# The "builder" image is automatically built by the Makefile before
-# any of the "real" images are build.
-#
-# Image name: cytopia/ansible-builder
-# How to build: docker build -t cytopia/ansible-builder -f builder .
+# How to build: docker build -t jenciso/ansible-builder -f builder .
 #
 
 FROM alpine:3.13 as builder

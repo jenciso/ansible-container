@@ -38,20 +38,6 @@ RUN set -eux \
 # --------------------------------------------------------------------------------------------------
 FROM alpine:3.13 as production
 ARG VERSION
-# https://github.com/opencontainers/image-spec/blob/master/annotations.md
-#LABEL "org.opencontainers.image.created"=""
-#LABEL "org.opencontainers.image.version"=""
-#LABEL "org.opencontainers.image.revision"=""
-LABEL "maintainer"="cytopia <cytopia@everythingcli.org>"
-LABEL "org.opencontainers.image.authors"="cytopia <cytopia@everythingcli.org>"
-LABEL "org.opencontainers.image.vendor"="cytopia"
-LABEL "org.opencontainers.image.licenses"="MIT"
-LABEL "org.opencontainers.image.url"="https://github.com/cytopia/docker-ansible"
-LABEL "org.opencontainers.image.documentation"="https://github.com/cytopia/docker-ansible"
-LABEL "org.opencontainers.image.source"="https://github.com/cytopia/docker-ansible"
-LABEL "org.opencontainers.image.ref.name"="Ansible ${VERSION} base"
-LABEL "org.opencontainers.image.title"="Ansible ${VERSION} base"
-LABEL "org.opencontainers.image.description"="Ansible ${VERSION} base"
 
 RUN set -eux \
 	&& apk add --no-cache \
