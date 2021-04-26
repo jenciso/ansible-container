@@ -1,12 +1,9 @@
-FROM centos:centos7
-
-RUN yum -y install epel-release && \
-    yum -y install PyYAML python-jinja2 python-httplib2 \
-      python-keyczar python-paramiko python-setuptools \
-      git python-pip ansible
-    
-RUN yum clean all && rm -rf /var/cache/yum
-
-RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
-
-CMD ['ansible']
+FROM ubuntu:20.04                                                     
+                                                                      
+ENV DEBIAN_FRONTEND=noninteractive                                    
+                                                                      
+RUN apt-get update && \
+  apt-get install -y gcc python-dev libkrb5-dev && \
+  apt-get install python3-pip -y && \
+  pip3 install --upgrade pip && \
+  pip3 install ansible && rm -rf /var/cache/apt
