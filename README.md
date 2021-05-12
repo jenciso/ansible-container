@@ -11,7 +11,13 @@ Repositorio que cria uma docker image para rodar ansible como container
 
 ```shell
 docker build -t jenciso/ansible-builder  -f builder .
-docker build -t jenciso/ansible-container:latest --build-arg=VERSION=2.10 .
+docker build -t jenciso/ansible-container:2.10-alpine --build-arg=VERSION=2.10 .
+```
+
+* Push
+
+```shell
+docker push jenciso/ansible-container:2.10-alpine
 ```
 
 * Run
