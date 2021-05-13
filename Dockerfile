@@ -39,6 +39,8 @@ RUN set -eux \
 FROM alpine:3.13 as production
 ARG VERSION
 
+LABEL "org.jenciso.image.url"="https://github.com/jenciso/ansible-container"
+
 RUN set -eux \
 	&& apk add --no-cache \
 		py3-pip \
