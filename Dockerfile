@@ -43,6 +43,9 @@ LABEL "org.jenciso.image.url"="https://github.com/jenciso/ansible-container"
 
 RUN set -eux \
 	&& apk add --no-cache \
+	  bash \
+		git \
+		openssh \
 		py3-pip \
 		python3 \
 	&& ln -sf /usr/bin/python3 /usr/bin/python \
